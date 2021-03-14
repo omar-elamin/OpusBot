@@ -1,6 +1,7 @@
 # Base class for a Circular Queue
 class Queue:
     def __init__(self, n):
+        """Circular static queue. Size determined by input n."""
         # pointer to the front of the Queue
         self._front = 0
         # pointer to the rear of the Queue
@@ -57,6 +58,7 @@ class Queue:
 class Song:
     def __init__(self, title, artist, link, length, track, album=None, main_genre=None, other_genres: list = None,
                  producers: list = None, year_released=None, timestamp=None):
+        """Skeleton wrapper for all songs, track object used to communicate with lavalink."""
         self.title = title
         self.artist = artist
         self.link = link
@@ -69,15 +71,15 @@ class Song:
         self.year_released = year_released
         self.timestamp = timestamp
 
-    # if the song object is called in a print object, it will print in the given format Example: "Shape of You by Ed
-    # Sheeran on Divide"
     def __repr__(self):
+        """Format of a repr is the given format; Example: "Shape of You by Ed Sheeran on Divide"""
         return f'{self.title} by {self.artist} on {self.album}'
 
 
 # Song Queue objects, inherits Queue object but incorporates adding and removing songs by Object
 class SongQueue(Queue):
     def __init__(self, n):
+        """A subclass of Queue that has special methods for adding and removing songs from the queue."""
         super().__init__(n)
 
     def add_song(self, song: Song):  # adds a song to the queue in the form of a song Object
