@@ -1,7 +1,7 @@
 import aiohttp
 
 from cogs.events import NodeConnected, TrackEnded, ClosedWebSocket, LavalinkEvent
-from cogs.music import song_management
+from music_master import song_management
 from utils.functions import track_from_utf
 
 
