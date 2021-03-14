@@ -1,8 +1,8 @@
 import sys
 
 from cogs.events import EndOfQueue, TrackEnded
-from cogs.music.Web.WebSocket import Node
-from cogs.music.song_management import SongQueue, Song
+from music_master.Web.WebSocket import Node
+from music_master.song_management import SongQueue, Song
 
 
 # Player class, each server has it's own player in order to manage simultaneous playing in multiple servers
