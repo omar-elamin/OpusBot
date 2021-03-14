@@ -5,8 +5,9 @@ from music_master import song_management
 from utils.functions import track_from_utf
 
 
-class Node:  # Node object, represents a node connection to Lavalink
+class Node:
     def __init__(self, host, port, password, player):
+        """Node object, represents a node connection to Lavalink."""
         self.player = player
         self.host = host
         self.port = port
@@ -22,12 +23,10 @@ class Node:  # Node object, represents a node connection to Lavalink
     # Method to invoke an event
     async def invoke_event(self, event: LavalinkEvent):  # Sends a Lavalink Event object to Lavalink
         async def main():
-            async with aiohttp.ClientSession() as _:
+            async with aiohttp.ClientSession() as session:
                 _ws = WebSocket(self, max_retries=1)  # Opens a web socket connection
 
-                """"""""""""""""""""""""""
-                """ EVENT HOOKS NEEDED """
-                """"""""""""""""""""""""""
+                pass  # EVENT HOOKS NEEDED
 
         await main()
 
@@ -43,8 +42,9 @@ class Node:  # Node object, represents a node connection to Lavalink
         await main()
 
 
-class WebSocket:  # the WebSocket object
+class WebSocket:
     def __init__(self, node: Node, max_retries=1):
+        """WebSocket object, used to communicate with the Lavalink jar."""
         self.node = node  # Takes in a node as a parameter
         self.session = node.session
         self._ws = None
