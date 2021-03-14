@@ -7,8 +7,7 @@ from utils.functions import read_json, write_json
 # the Cog that groups commands that involve configuration of the bot
 class Config(commands.Cog):
     def __init__(self, bot):
-        
-        """A set of commands used to edit settings that directly affect the bot's behaviour."""
+        """ A set of commands used to edit settings that directly affect the bot's behaviour. """
         self.bot = bot
 
     @commands.command(aliases=['changeprefix', 'setprefix'])
