@@ -72,7 +72,7 @@ class Song:
         self.timestamp = timestamp
 
     def __repr__(self):
-        """Format of a repr is the given format; Example: "Shape of You by Ed Sheeran on Divide"""
+        """Format of a repr is the given format; Example: "Shape of You by Ed Sheeran on Divide."""
         return f'{self.title} by {self.artist} on {self.album}'
 
 
