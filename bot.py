@@ -5,12 +5,14 @@ from discord.ext import commands
 
 from utils.functions import read_json, get_prefix
 
-'''Discord.py is an API wrapper for Discord written in python
+"""
+
+Discord.py is an API wrapper for Discord written in python
 
 Common recurring themes:
  - a 'Guild':
-    a Guild is what discord uses to refer to a server. Events detected by the bot can either be within a guild channel 
-    or a Direct Message Channel. 
+    a Guild is what discord uses to refer to a server. Events detected by the bot can either be within a guild channel
+    or a Direct Message Channel.
  - ctx or 'context':
     The context is an argument passed when a command is invoked, it wraps the context which a command is invoked under
     attributes include:
@@ -22,15 +24,17 @@ Common recurring themes:
      - kwargs (the arguments passed into the command in dictionary form)
      - guild (the server or 'guild' the command was invoked in)
  - discord.Embed():
-    An embedded message that can only be used by bot user accounts. It is quite powerful and can format messages in an 
+    An embedded message that can only be used by bot user accounts. It is quite powerful and can format messages in an
     aesthetically pleasing form.
  - Cogs:
-    a Cog as defined by discord is: "a collection of commands, listeners, and optional state to help group commands 
+    a Cog as defined by discord is: "a collection of commands, listeners, and optional state to help group commands
     together"
     They are used in this project to categorize and group commands to increase efficiency
  - Extensions:
     An extension is a python module, in this project each extension contains a single cog class and a global "setup" 
-    function for discord.py to run.'''
+    function for discord.py to run.
+
+"""
 
 # stores the current config json in a dictionary to be accessed
 config = read_json('config')
