@@ -70,18 +70,14 @@ def setup(bot):
 
 
 class LavalinkEvent:
-    """
-    
-    Base event.
-    
-    """
+    """Base event."""
 
 
 class EndOfQueue(LavalinkEvent):
     """
-    
+
     Called when a queue reaches it's end and there are no more songs.
-    
+
     """
 
     def __init__(self, player):
@@ -90,9 +86,9 @@ class EndOfQueue(LavalinkEvent):
 
 class TrackStarted(LavalinkEvent):
     """
-    
+
     Called when a track starts playing.
-    
+
     """
 
     def __init__(self, player, track):
@@ -102,9 +98,9 @@ class TrackStarted(LavalinkEvent):
 
 class TrackEnded(LavalinkEvent):
     """
-    
+
     Called when a track stops playing.
-    
+
     """
 
     def __init__(self, player, track, reason):
@@ -115,9 +111,9 @@ class TrackEnded(LavalinkEvent):
 
 class NodeConnected(LavalinkEvent):
     """
-    
+
     Called when a Node is connected.
-    
+
     """
 
     def __init__(self, node):
@@ -126,9 +122,9 @@ class NodeConnected(LavalinkEvent):
 
 class ClosedWebSocket(LavalinkEvent):
     """
-    
+
     Called when the Web Socket is closed.
-    
+
     """
 
     def __init__(self, player, code, reason):
