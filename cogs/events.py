@@ -74,60 +74,35 @@ class LavalinkEvent:
 
 
 class EndOfQueue(LavalinkEvent):
-    """
-
-    Called when a queue reaches it's end and there are no more songs.
-
-    """
-
     def __init__(self, player):
+        """Called when a queue reaches it's end and there are no more songs."""
         self.player = player
 
 
 class TrackStarted(LavalinkEvent):
-    """
-
-    Called when a track starts playing.
-
-    """
-
     def __init__(self, player, track):
+        """Called when a track starts playing."""
         self.player = player
         self.track = track
 
 
 class TrackEnded(LavalinkEvent):
-    """
-
-    Called when a track stops playing.
-
-    """
-
     def __init__(self, player, track, reason):
+        """Called when a track stops playing."""
         self.player = player
         self.track = track
         self.reason = reason
 
 
 class NodeConnected(LavalinkEvent):
-    """
-
-    Called when a Node is connected.
-
-    """
-
     def __init__(self, node):
+        """Called when a Node is connected."""
         self.node = node
 
 
 class ClosedWebSocket(LavalinkEvent):
-    """
-
-    Called when the Web Socket is closed.
-
-    """
-
     def __init__(self, player, code, reason):
+        """Called when the Web Socket is closed."""
         self.player = player
         self.code = code
         self.reason = reason
