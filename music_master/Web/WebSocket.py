@@ -23,10 +23,9 @@ class Node:
     # Method to invoke an event
     async def invoke_event(self, event: LavalinkEvent):  # Sends a Lavalink Event object to Lavalink
         async def main():
-            async with aiohttp.ClientSession() as session:
+            async with aiohttp.ClientSession() as _:
                 _ws = WebSocket(self, max_retries=1)  # Opens a web socket connection
-
-                pass  # EVENT HOOKS NEEDED
+                # EVENT HOOKS NEEDED HERE
 
         await main()
 
@@ -44,7 +43,7 @@ class Node:
 
 class WebSocket:
     def __init__(self, node: Node, max_retries=1):
-        """WebSocket object, used to communicate with the Lavalink jar."""
+        """Web socket object, used to communicate with the Lavalink jar."""
         self.node = node  # Takes in a node as a parameter
         self.session = node.session
         self._ws = None
