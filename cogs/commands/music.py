@@ -7,7 +7,7 @@ from utils import functions, checks
 
 class Music(commands.Cog):  # Initializes Music cog. Creates a category of commands called Music
     def __init__(self, bot):
-        """ A set of commands used to control the music. """
+        """A set of commands used to control the music."""
         self.bot = bot
         self.bot.PlayerManager = players.PlayerManager()  # Initializes the bot's player manager
 
