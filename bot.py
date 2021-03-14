@@ -5,8 +5,7 @@ from discord.ext import commands
 
 from utils.functions import read_json, get_prefix
 
-'''
-Discord.py is an API wrapper for Discord written in python
+'''Discord.py is an API wrapper for Discord written in python
 
 Common recurring themes:
  - a 'Guild':
@@ -31,8 +30,7 @@ Common recurring themes:
     They are used in this project to categorize and group commands to increase efficiency
  - Extensions:
     An extension is a python module, in this project each extension contains a single cog class and a global "setup" 
-    function for discord.py to run.
-'''
+    function for discord.py to run.'''
 
 # stores the current config json in a dictionary to be accessed
 config = read_json('config')
@@ -57,7 +55,7 @@ bot.colours = {
 # all the extensions are defined and the bot attempts to load each extension; if an error is raised it will simply
 # catch the error and print it out
 extensions = [
-    'cogs.commands.music',
+    'cogs.commands.music_master',
     'cogs.commands.configuration',
     'cogs.events',
     'cogs.commands.developer_tools'
