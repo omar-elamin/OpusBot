@@ -8,13 +8,12 @@ import utils.checks as checks
 
 class DevTools(commands.Cog, name='Developer Tools'):
     def __init__(self, bot):
-        """ A set of tools for the bot developer to use when testing the bot. """
+        """A set of tools for the bot developer to use when testing the bot."""
         self.bot = bot
 
     @checks.is_developer()  # Checks that the person sending the command is a bot developer.
     @commands.command(aliases=['eval'])
     async def debug(self, ctx, code):
-        
         """Executes a line of code for debugging."""
         em = discord.Embed()
         em.title = 'Result'
