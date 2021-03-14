@@ -31,7 +31,7 @@ class DevTools(commands.Cog, name='Developer Tools'):
     @checks.is_developer()  # Checks that the person sending the command is a bot developer.
     @commands.command()
     async def shutdown(self, ctx):
-        """ Shuts down the bot. """
+        """Shuts down the bot."""
         em = discord.Embed()
         em.title = 'Shutdown'
         em.description = 'Bot offline.'
