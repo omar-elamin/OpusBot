@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 
-from cogs.music import players
+from music_master import players
 from utils import functions, checks
 
 
