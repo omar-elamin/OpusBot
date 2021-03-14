@@ -7,6 +7,7 @@ from utils import functions, checks
 
 class Music(commands.Cog):  # Initializes Music cog. Creates a category of commands called Music
     def __init__(self, bot):
+        """ A set of commands used to control the music. """
         self.bot = bot
         self.bot.PlayerManager = players.PlayerManager()  # Initializes the bot's player manager
 
@@ -73,7 +74,7 @@ class Music(commands.Cog):  # Initializes Music cog. Creates a category of comma
         if player.is_connected:
             # returns a song object or a list of song objects from the query
             song = await functions.query_to_song(query, self.bot.PlayerManager.get_player(ctx.guild.id))
-            if type(song) == list:  # checks if query returned a playlist or a singular song and queues accordingly
+            if isinstance(song, list):  # checks if query returned a playlist or a singular song and queues accordingly
                 for song_object in song:
                     player.add_song(song_object)
                 em.description = f'Added {len(song)} songs to queue'
@@ -83,7 +84,7 @@ class Music(commands.Cog):  # Initializes Music cog. Creates a category of comma
                 em.description = f'Added {song.title} to queue'
 
         else:
-            em.description = f'Bot is not connected to a voice channel'
+            em.description = 'Bot is not connected to a voice channel'
 
         await ctx.send(embed=em)
 
