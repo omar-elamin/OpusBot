@@ -1,2 +1,2 @@
 # OpusBot
-A Discord music bot.
+A music bot I'm working on for a school project
